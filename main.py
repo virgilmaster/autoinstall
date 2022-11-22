@@ -31,6 +31,7 @@ class runner:
         try:
             
             from functions.inspector import checker
+            from queue.beesfly import wizard
             from threading import Lock
             import threading
 
@@ -41,10 +42,12 @@ class runner:
         loop_num = len(domainlist)
         j = 0
         while j < loop_num:
-            #sourcenames = domainlist[j]
-            witch = wizard(domainlist[j])
-            witch.spellmagic
+            sourcenames = domainlist[j]
+            # witch = wizard(domainlist[j])
+            # witch.spellmagic()
+            print(sourcenames)
             j += 1
+            
 
     # lock = Lock()
     # tk = threading.Thread(target=handle_packages, args=(,))
