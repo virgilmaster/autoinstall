@@ -20,7 +20,7 @@ from functions.progessbar import timebar
 
 # run main function
 start_counter = time.perf_counter()
-filename = r'C:\Myworkspace\Inventory\Private\test1\autoinstall\requirements.txt'
+filename = r'C:\XXX\XXX\XXX\XXX\XXX\requirements.txt'
 osys = platform.system()
 run = runner(osys,filename)
 run.check_system()
