@@ -18,16 +18,16 @@ from functions.inspector import checker
 from main import runner
 from functions.progessbar import timebar
 
-# Test main
+# run main function
 start_counter = time.perf_counter()
-filename = 'requirements.txt'
+filename = r'C:\Myworkspace\Inventory\Private\test1\autoinstall\requirements.txt'
 osys = platform.system()
 run = runner(osys,filename)
 run.check_system()
 print("Begin time is: " + str(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')))
 files_read = filesdetails(filename)
 pack_information = files_read.readinfo
-launcher = logwriter(pack_information)
+launcher = logwriter(filename,pack_information)
 launcher.log_record()
 # run.handle_packages()
 end_counter = time.perf_counter()
@@ -38,7 +38,7 @@ runtime.counter_process()
 
 
 
-# test filehandler
+# run filehandler function
 # files2 = filesdetails('requirements.txt')
 # print(type(files2.counter))
 # print(files2.readinfo)
@@ -52,7 +52,7 @@ runtime.counter_process()
 
 
 
-# test readinfo
+# run readinfo function
 # files = filesdetails('requirements.txt')
 # files33 = files.readinfo
 # for i in range(len(files33)):
@@ -63,7 +63,7 @@ runtime.counter_process()
 
 
 
-# test inspector
+# run inspector function
 # import platform
 # os = platform.system()
 # file = 'requirements.txt'
@@ -72,7 +72,7 @@ runtime.counter_process()
 
 
 
-
+# run wizard function
 # from beesfly import wizard
 # from inspector import checker
 # import os
@@ -85,7 +85,7 @@ runtime.counter_process()
 
 
 
-# test sourceholder
+# run sourceholder function
 # tasklist = ['aliyun','tsinghua','ustc','douban']
 # j = 0
 # loop_num = len(tasklist)
