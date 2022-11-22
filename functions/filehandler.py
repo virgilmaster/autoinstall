@@ -19,6 +19,7 @@ class filesdetails:
             pack_num.close()
         return final_num
 
+
     @property
     def readinfo(self):
         file_name = self.filename
@@ -40,6 +41,7 @@ class filesdetails:
 
         except ImportError as e:
             raise e
+
         file_name = self.filename
         os_result = platform.system()
         result_pack = filesdetails(file_name)
